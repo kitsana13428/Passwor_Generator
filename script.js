@@ -16,7 +16,7 @@ function getLowercase() {
     return lowerLetters[Math.floor(Math.random() * lowerLetters.length)];
 }
 
-function getUpperacse() {
+function getUppercase() {
     return upperLetters[Math.floor(Math.random() * upperLetters.length)];
 }
 
@@ -29,8 +29,39 @@ function getSymbol() {
 }
 
 function generatePassword() { /* สร้างรหัสผ่าน */
-    const
+
+    const len = lenEl.value;
+
+    let password = '';
+
+    for(let i=0;i<len;i++){
+        const x = generateX();
+
+        password += x;
+    }
+
     pwEl.innerText = password;
 }
 
-generateEl.addEvenListener('click', generatePassword);
+function generateX(){
+    const xs =[];
+    if(upperEl.checked){
+        xs.push(getUppercase());
+    }
+
+    if(lowerEl.checked){
+        xs.push(getLowercase());
+    }
+
+    if(numberEl.checked){
+        xs.push(getNumber());
+    }
+
+    if(symbolEl.checked){
+        xs.push(getSymbol());
+    }
+
+    return xs [Math.floor(Math.random() * xs.length)];    
+}
+
+generateEl.addEventListener("click", generatePassword);
