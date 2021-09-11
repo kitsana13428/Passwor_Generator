@@ -5,7 +5,7 @@
 }
 
 body{
-    background-color: rebeccapurple;
+    background-color: rgb(93, 15, 167);
     color: white;
     font-family: "Poppins", sans-serif;
     margin: 0;
@@ -16,40 +16,41 @@ body{
 }
 
 .pw-container {
-    background-color: rgb(81, 10, 153);
+    background-color: rgb(19, 21, 141);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     width: 400px; 
 }
 
 .pw {
-    background-color: rebeccapurple;
-    font-size: 2rem;
+    background-color: rgb(80, 81, 177);
+    font-size: 1.3rem;
     height: 70px;
     width: 100%;
     display: flex;
     align-items: center;
     position: relative;
     padding: 1rem;
+    overflow: auto;
 }   
 
 .pw button {
-    background-color: rgb(12, 12, 12);
+    background-color: rgb(255, 255, 255);
     border: none;
-    color: white;
+    color: rgb(0, 0, 0);
     padding: 0.25rem ;
     font-family: inherit;
     font-weight: bold;
     position: absolute;
     top: 0;
     right: 0;
-    transform: translate(0, -50%);
+    transform: translate(0, 20%);
     transition: opacity 0.2s ease, transform 0.2s ease; /* ให้ค่อยๆโผล่ 0.2 วิ */
     opacity: 0; /* ซ่อน ไม่ให้เห็น */
     cursor: pointer;
 }
 
 .pw:hover button { /* เอาเมาส์ไปชี้ จะเห็น */
-    transform: translate(0, -80%); 
+    transform: translate(0, 0%); 
     opacity: 1;
 }
 
@@ -69,7 +70,7 @@ body{
 }
 
 .generate {
-    background-color: rgb(224, 122, 5);
+    background-color: rgb(70, 168, 13);
     color: white;
     border: none;
     display: block;
@@ -78,4 +79,9 @@ body{
     margin-top: 0.75rem;
     padding: 0.5rem;
     width: 100%;
+    cursor: pointer;
+}
+
+.generate:hover {
+    background-color: rgb(40, 102, 5); 
 }
